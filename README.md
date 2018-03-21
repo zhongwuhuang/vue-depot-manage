@@ -23,9 +23,6 @@ vue-depot-manage是一套基于Vue/Vue-Router/axios/Vuex实现的前端用户权
 - views: 视图页面
 -  static: 静态文件 存放 favicon.ico 等等
 
-## 有帮助打个赞
-![微信扫一扫](https://raw.githubusercontent.com/zhongwuhuang/zhongwuhuang.github.io/master/img/webwxgetmsgimg.jpg)
-
 ## 下载
 
 git：`git clone https://github.com/zhongwuhuang/vue-depot-manage.git`
@@ -57,3 +54,6 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+## 有帮助打个赞
+![微信扫一扫](https://raw.githubusercontent.com/zhongwuhuang/zhongwuhuang.github.io/master/img/webwxgetmsgimg.png)
