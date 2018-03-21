@@ -1,5 +1,6 @@
 import jwt from 'jwt-simple'
 import Cookies from 'js-cookie'
+import axios from 'axios'
 
 // 保存roles
 const roles = function(){
@@ -52,8 +53,25 @@ const getDateDiff = function(dateTimeStamp){
   return result;
 }
 
+// const $axios = function(method,url){
+//   axios({
+//     method:method,
+//     baseURL:'http://192.168.10.32:6001',
+//     url:url,
+//     // headers:{'X-Authorization':Cookies.get('Admin-Token')},
+//   })
+//   .then(function (response) {
+//     console.log(response);
+//     return response
+//   })
+//   .catch(function (error) {
+//     return error;
+//   });
+// }
+
 
 export default {
   roles,
   getDateDiff,
+  // $axios
 }

@@ -29,8 +29,8 @@
         <div style="width:100%;">
           <el-col :span="24">
             <template>
-              <el-select style="width:100%;" v-model="selected" placeholder="请选择">
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.label"></el-option>
+              <el-select style="width:100%;" v-model="categoryId" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.categoryId" :label="item.name" :value="item.categoryId"></el-option>
               </el-select>
             </template>
           </el-col>
@@ -248,33 +248,8 @@
         pagesize:10,//每页的数据条数
         currentPage:1,//默认开始页面
         tableData:[],
-        options: [
-          {
-            value: 1,
-            label: '电子元器件'
-          },
-          {
-            value: 2,
-            label: '传感器'
-          },
-          {
-            value: 3,
-            label: '专用设备'
-          },
-          {
-            value: 4,
-            label: '办公用品'
-          },
-          {
-            value: 5,
-            label: '日用电器'
-          },
-          {
-            value: 6,
-            label: '书籍材料'
-          }
-        ],
-        selected: '',
+        options: [],
+        categoryId:'',
         details:false,
         apply:false,
         pur:false,
@@ -397,9 +372,10 @@
         this.purForm.link.push('')
         console.log(this.purForm.link);
       },
+      // 获取物品列表
       getGoods() {
         const self = this
-        this.axios.get('/list/goods')
+        self.axios.get('/list/goods')
         .then(function (response) {
           self.tableData = response.data.list
           self.total = response.data.list.length
@@ -409,11 +385,17 @@
           console.log(error);
         });
       },
+      // 获取分类列表
+      getCategory(){
+        const self = this
+        console.log(self.tools.$axios('get','api/categories'))
+      },
     },
     // 下拉框默认选中
     created(){
-      this.selected = this.options[1].label;
       this.getGoods()
+      // this.getCategory()
+      // this.selected = this.options[0].categoryId
     }
   }
 </script>

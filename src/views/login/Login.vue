@@ -69,8 +69,6 @@ export default {
   },
   //页面加载调用获取cookie值
   mounted() {
-    this.Cookies.set('34634565', 'self.loginForm.username', { expires: 7 });
-    console.log('2314145');
     this.loginForm.username = this.Cookies.get('userName')
     this.loginForm.password = this.Cookies.get('userPwd')
 

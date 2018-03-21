@@ -56,14 +56,14 @@ const permission = {
         if (roles.indexOf('ROLE_ADMIN') >= 0) {
           // accessedRouters = asyncRouterMap
           accessedRouters = filterAsyncRouter(asyncRouterMap, roles)
-          console.log('accessedRouters:' + accessedRouters)
+          // console.log('accessedRouters:' + accessedRouters)
         } else {
           accessedRouters = filterAsyncRouter(asyncRouterMap, roles)
-          console.log('accessedRouters:' + accessedRouters)
+          // console.log('accessedRouters:' + accessedRouters)
           // accessedRouters = ''
           // accessedRouters = asyncRouterMap
         }
-        console.log('accessedRouters', accessedRouters)
+        // console.log('accessedRouters', accessedRouters)
         commit('SET_ROUTERS', accessedRouters)
         // 表明路由加载完成
         commit('SET_ISADDROUTERS', true)

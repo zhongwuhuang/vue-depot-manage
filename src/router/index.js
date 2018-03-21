@@ -7,8 +7,7 @@ export const constantRouterMap = [
 
   {
     path: '*', //所有的（*代表所有）错误页面
-    // redirect: '/404',
-    component: () => import('../components/common/404.vue'),
+    component: () => import('../views/error/404.vue'),
     hidden: true
   },
   {
@@ -26,7 +25,7 @@ export const constantRouterMap = [
     path: '/applytest',
     name: '采购页面',
     hidden: true,
-    component: resolve => require(['../views/login/applytest.vue'], resolve)
+    component: resolve => require(['../views/page/applytest.vue'], resolve)
   },
   {
     path: '/index',
@@ -35,7 +34,7 @@ export const constantRouterMap = [
     children: [{
       name: 'index',
       path: '/index',
-      component: resolve => require(['../components/page/index.vue'], resolve)
+      component: resolve => require(['../views/page/index.vue'], resolve)
     }]
   },
   {
@@ -45,7 +44,7 @@ export const constantRouterMap = [
     children: [{
       name: 'query',
       path: '/query',
-      component: resolve => require(['../components/page/query.vue'], resolve)
+      component: resolve => require(['../views/page/query.vue'], resolve)
     }]
   },
   {
@@ -55,7 +54,7 @@ export const constantRouterMap = [
     children: [{
       name: 'pur',
       path: '/pur',
-      component: resolve => require(['../components/page/pur.vue'], resolve)
+      component: resolve => require(['../views/page/pur.vue'], resolve)
     }]
   },
 
@@ -76,7 +75,7 @@ export const asyncRouterMap = [
     children: [{
       name: 'apply',
       path: '/apply',
-      component: resolve => require(['../components/page/admin/apply.vue'], resolve)
+      component: resolve => require(['../views/page/admin/apply.vue'], resolve)
     }]
   },
   {
@@ -86,19 +85,19 @@ export const asyncRouterMap = [
     children: [{
       name: 'sto',
       path: '/sto',
-      component: resolve => require(['../components/page/admin/sto.vue'], resolve)
+      component: resolve => require(['../views/page/admin/sto.vue'], resolve)
     }]
   },
 
   // 普通用户
   // {
-  //   path: '/userhome',
+  //   path: '/user',
   //   meta: {title: '首页',icon: 'el-icon-setting',roles: ['ROLE_USER']},
   //   component: resolve => require(['../components/common/Home.vue'], resolve),
   //   children: [{
-  //     name: 'userhome',
-  //     path: '/userhome',
-  //     component: resolve => require(['../components/page/user/userhome.vue'], resolve)
+  //     name: 'user',
+  //     path: '/user',
+  //     component: resolve => require(['../components/page/user/user.vue'], resolve)
   //   }]
   // },
 ]

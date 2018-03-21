@@ -9,7 +9,7 @@ const whiteList = ['/login', '/authredirect'] // 不重定向白名单
 router.beforeEach((to, from, next) => {
   console.log('to:'+to)
   console.log('from:'+from)
-  console.log('getToken():'+getToken())
+  // console.log('getToken():'+getToken())
   if (getToken()) { // 判断是否有token
     if (to.path === '/login') {
       next({ path: '/' })

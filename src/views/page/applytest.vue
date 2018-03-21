@@ -1,13 +1,14 @@
 <template lang="html">
   <div class="">
-    物资详情
+    采购页面，这个页面不在导航内
   </div>
 </template>
 
 <script>
-export default {
-}
+  export default {
+  }
 </script>
 
-<style lang="css">
+<style scoped>
+
 </style>

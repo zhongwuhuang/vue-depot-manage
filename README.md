@@ -1,8 +1,6 @@
 
 # 基于vue实现的不同用户权限控制的仓储系统
 
-[![npm](https://img.shields.io/npm/v/vue-access-control.svg)](https://www.npmjs.com/package/vue-access-control/)  [![license](https://img.shields.io/github/license/tower1229/Vue-Access-Control.svg)]()
-
 > :gem: Vue权限后台系统
 
 ## 介绍
@@ -25,8 +23,8 @@ vue-depot-manage是一套基于Vue/Vue-Router/axios/Vuex实现的前端用户权
 - views: 视图页面
 -  static: 静态文件 存放 favicon.ico 等等
 
-## 捐赠
-<!-- ![微信扫一扫](http://img.blog.csdn.net/20180301190740227?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzIzNDA4Nzc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70) -->
+## 有帮助打个赞
+![微信扫一扫](https://raw.githubusercontent.com/zhongwuhuang/zhongwuhuang.github.io/master/img/webwxgetmsgimg.jpg)
 
 ## 下载
 

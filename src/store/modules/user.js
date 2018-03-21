@@ -1,4 +1,4 @@
-import { login, logout, getInfo } from '@/api/login'
+import { login, logout } from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import jwt from 'jwt-simple'
 
@@ -13,12 +13,6 @@ const user = {
   mutations: {
     SET_TOKEN: (state, token) => {
       state.token = token
-    },
-    SET_NAME: (state, name) => {
-      state.name = name
-    },
-    SET_AVATAR: (state, avatar) => {
-      state.avatar = avatar
     },
     SET_ROLES: (state, roles) => {
       state.roles = roles
@@ -42,21 +36,6 @@ const user = {
           // commit('SET_ROLES', decoded.scopes)
 
           resolve()
-        }).catch(error => {
-          reject(error)
-        })
-      })
-    },
-
-    // 获取用户信息
-    GetInfo({ commit, state }) {
-      return new Promise((resolve, reject) => {
-        getInfo(state.token).then(response => {
-          const data = response.data
-          commit('SET_ROLES', data.roles)
-          // commit('SET_NAME', data.name)
-          // commit('SET_AVATAR', data.avatar)
-          resolve(response)
         }).catch(error => {
           reject(error)
         })
