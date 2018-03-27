@@ -55,5 +55,5 @@ npm run build
 npm run build --report
 ```
 
-## 有帮助打个赞
-![微信扫一扫](https://raw.githubusercontent.com/zhongwuhuang/zhongwuhuang.github.io/master/img/webwxgetmsgimg.png)
+//## 有帮助打个赞
+//![微信扫一扫](https://raw.githubusercontent.com/zhongwuhuang/zhongwuhuang.github.io/master/img/webwxgetmsgimg.png)
